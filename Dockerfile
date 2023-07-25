@@ -20,4 +20,4 @@ COPY --from=build /home/gradle/project/build/libs/kakao-1.0.jar .
 
 ENV DATABASE_URL=jdbc:mariadb://localhost:3306/kakao
 
-CMD ["java", "-jar", "-Dspring.profiles.active=local", "kakao-1.0.jar"]
+CMD ["java", "-jar", "-Dspring.profiles.active=prod", "kakao-1.0.jar"]
